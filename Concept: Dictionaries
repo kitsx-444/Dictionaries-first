@@ -1,0 +1,19 @@
+# Concept: Dictionaries
+
+pairs = {
+    "EURUSD": {"spread": 1.2, "session": "London/New York", "volatility": "Medium"},
+    "GBPUSD": {"spread": 1.5, "session": "London/New York", "volatility": "High"},
+    "USDJPY": {"spread": 1.1, "session": "Asian/New York", "volatility": "Medium"},
+    "AUDUSD": {"spread": 1.3, "session": "Asian/London", "volatility": "Low"},
+}
+
+request = input('Which pair do you want to look up: ').upper()
+
+if request not in pairs:
+    print('Pair not found.')
+else:
+    print('---- Currency Pair Factsheet ----')
+    print(f'Pair: {request}')
+    print('Spread:', pairs[request]['spread'])
+    print('Session:', pairs[request]['session'])
+    print('Volatility', pairs[request]['volatility'])
